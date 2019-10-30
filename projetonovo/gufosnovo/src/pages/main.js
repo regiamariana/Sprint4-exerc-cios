@@ -1,7 +1,16 @@
 import React,{ Component } from "react";
-import {Text, FlatList, View, SafeAreaView} from 'react-native';
+import {Text, FlatList, View, SafeAreaView, Image, StyleSheet, TouchableOpacity} from 'react-native';
 
 export default class Main extends Component{
+    static navigationOptions = {
+        tabBarIcon: () => (
+          <Image
+            source={require('../assets/img/calendar.png')}
+            style={styles.tabBarNavigatorIcon}
+          />
+        ),
+      };
+
     constructor(){
         super();
         this.state = {
@@ -22,7 +31,14 @@ export default class Main extends Component{
         .then(data=> this.setState({eventos: data}))
         .catch(erro => console.warn(erro));
     };
-    
+
+    _irParaCategorias = () => {
+       
+            this.props.navigation.navigate('Categorias');
+         
+      };
+
+     
     render(){
         return(
             <View style={{backgroundColor: 'purple',
@@ -37,19 +53,30 @@ export default class Main extends Component{
                 renderItem={({item}) => (
                     <View>
                         
-                    <Text style={{fontSize: '25'}}>{item.titulo}</Text>
-                    <Text style={{fontSize: '25'}}>{item.dataEvento}</Text>
+                    <Text >{item.titulo}</Text>
+                    <Text >{item.dataEvento}</Text>
                     </View>
                     
                     )}
             />
-             </View>
+
+            <View>
+            <TouchableOpacity onPress={this._irParaCategorias}>
+            <Text>Categorias</Text>
+            </TouchableOpacity>
+            </View>
+
+            </View>
+            
         );
-        
+       
     }
 
     
 }
+const styles = StyleSheet.create({
+    tabBarNavigatorIcon: {width: 25, height: 25, tintColor: 'white'}
+    });
 
 // const styles = StyleSheet.create({
 //     container: {
