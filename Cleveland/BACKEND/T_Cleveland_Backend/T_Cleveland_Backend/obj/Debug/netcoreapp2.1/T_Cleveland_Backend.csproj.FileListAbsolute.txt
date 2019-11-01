@@ -1,0 +1,14 @@
+C:\Users\47425337800\Documents\sprint4\Sprint4-exerc-cios\Cleveland\BACKEND\T_Cleveland_Backend\T_Cleveland_Backend\bin\Debug\netcoreapp2.1\T_Cleveland_Backend.deps.json
+C:\Users\47425337800\Documents\sprint4\Sprint4-exerc-cios\Cleveland\BACKEND\T_Cleveland_Backend\T_Cleveland_Backend\bin\Debug\netcoreapp2.1\T_Cleveland_Backend.runtimeconfig.json
+C:\Users\47425337800\Documents\sprint4\Sprint4-exerc-cios\Cleveland\BACKEND\T_Cleveland_Backend\T_Cleveland_Backend\bin\Debug\netcoreapp2.1\T_Cleveland_Backend.runtimeconfig.dev.json
+C:\Users\47425337800\Documents\sprint4\Sprint4-exerc-cios\Cleveland\BACKEND\T_Cleveland_Backend\T_Cleveland_Backend\bin\Debug\netcoreapp2.1\T_Cleveland_Backend.dll
+C:\Users\47425337800\Documents\sprint4\Sprint4-exerc-cios\Cleveland\BACKEND\T_Cleveland_Backend\T_Cleveland_Backend\obj\Debug\netcoreapp2.1\T_Cleveland_Backend.csprojAssemblyReference.cache
+C:\Users\47425337800\Documents\sprint4\Sprint4-exerc-cios\Cleveland\BACKEND\T_Cleveland_Backend\T_Cleveland_Backend\obj\Debug\netcoreapp2.1\T_Cleveland_Backend.csproj.CoreCompileInputs.cache
+C:\Users\47425337800\Documents\sprint4\Sprint4-exerc-cios\Cleveland\BACKEND\T_Cleveland_Backend\T_Cleveland_Backend\obj\Debug\netcoreapp2.1\T_Cleveland_Backend.RazorAssemblyInfo.cache
+C:\Users\47425337800\Documents\sprint4\Sprint4-exerc-cios\Cleveland\BACKEND\T_Cleveland_Backend\T_Cleveland_Backend\obj\Debug\netcoreapp2.1\T_Cleveland_Backend.RazorAssemblyInfo.cs
+C:\Users\47425337800\Documents\sprint4\Sprint4-exerc-cios\Cleveland\BACKEND\T_Cleveland_Backend\T_Cleveland_Backend\obj\Debug\netcoreapp2.1\T_Cleveland_Backend.AssemblyInfoInputs.cache
+C:\Users\47425337800\Documents\sprint4\Sprint4-exerc-cios\Cleveland\BACKEND\T_Cleveland_Backend\T_Cleveland_Backend\obj\Debug\netcoreapp2.1\T_Cleveland_Backend.AssemblyInfo.cs
+C:\Users\47425337800\Documents\sprint4\Sprint4-exerc-cios\Cleveland\BACKEND\T_Cleveland_Backend\T_Cleveland_Backend\obj\Debug\netcoreapp2.1\T_Cleveland_Backend.RazorTargetAssemblyInfo.cache
+C:\Users\47425337800\Documents\sprint4\Sprint4-exerc-cios\Cleveland\BACKEND\T_Cleveland_Backend\T_Cleveland_Backend\bin\Debug\netcoreapp2.1\T_Cleveland_Backend.pdb
+C:\Users\47425337800\Documents\sprint4\Sprint4-exerc-cios\Cleveland\BACKEND\T_Cleveland_Backend\T_Cleveland_Backend\obj\Debug\netcoreapp2.1\T_Cleveland_Backend.dll
+C:\Users\47425337800\Documents\sprint4\Sprint4-exerc-cios\Cleveland\BACKEND\T_Cleveland_Backend\T_Cleveland_Backend\obj\Debug\netcoreapp2.1\T_Cleveland_Backend.pdb

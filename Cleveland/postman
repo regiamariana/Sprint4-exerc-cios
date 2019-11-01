@@ -1,0 +1,33 @@
+{
+	"info": {
+		"_postman_id": "b32fa065-2953-4d78-8ccb-1e42f23dbd1e",
+		"name": "Senai.Cleveland.Tarde",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://192.168.4.14:5000/api/medicos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.4.14:5000/api/medicos",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"4",
+						"14"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"medicos"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
