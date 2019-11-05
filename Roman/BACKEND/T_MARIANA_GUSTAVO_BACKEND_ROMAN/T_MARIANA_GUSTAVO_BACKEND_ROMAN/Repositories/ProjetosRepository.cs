@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -23,7 +24,7 @@ namespace T_MARIANA_GUSTAVO_BACKEND_ROMAN.Repositories
         {
             using (RomanContext ctx = new RomanContext())
             {
-                return ctx.Projetos.ToList();
+                return ctx.Projetos.Include(x => x.IdProfessorNavigation).Include(x => x.IdTemaNavigation).ToList();
             }
         }
     }

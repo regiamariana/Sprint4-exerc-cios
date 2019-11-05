@@ -22,7 +22,7 @@ namespace T_MARIANA_GUSTAVO_BACKEND_ROMAN.Controllers
         {
             projetosRepository = new ProjetosRepository();
         }
-        [Authorize]
+        //[Authorize]
         [HttpPost]
         public IActionResult Cadastrar(Projetos projetos)
         {
@@ -51,7 +51,7 @@ namespace T_MARIANA_GUSTAVO_BACKEND_ROMAN.Controllers
             //    return BadRequest(new { mensagem = ex.Message });
             //}
         }
-        [Authorize]
+        //[Authorize]
         [HttpGet]
         public IActionResult Listar()
         {

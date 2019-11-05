@@ -19,7 +19,7 @@ export default class SignIn extends Component {
     }
 
     _realizarLogin = async () => {
-        fetch('http://localhost:5000/api/login' , {
+        fetch('http://192.168.4.14:5000/api/login' , {
             method: 'POST',
             headers: {
                 'Accept' : 'application/json',
@@ -38,7 +38,7 @@ export default class SignIn extends Component {
     _irParaHome = async(tokenAReceber) =>{
         if (tokenAReceber != null) {
             try {
-                await AsyncStorage.setItem('Roman-chave-autenticacao',tokenAReceber);
+                await AsyncStorage.setItem('@roman:token',tokenAReceber);
                 this.props.navigation.navigate('MainNavigator');
             } catch (error) {
                 console.warn(error)

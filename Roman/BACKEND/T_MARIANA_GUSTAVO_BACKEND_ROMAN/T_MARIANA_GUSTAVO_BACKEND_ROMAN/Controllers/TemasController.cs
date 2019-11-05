@@ -22,7 +22,7 @@ namespace T_MARIANA_GUSTAVO_BACKEND_ROMAN.Controllers
             temasRepository = new TemasRepository();
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpGet]
         public IActionResult Listar()
         {
