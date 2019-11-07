@@ -8,10 +8,16 @@ import MainScreen from './pages/main';
 import Cadastro from './pages/cadastrar';
 
 import Filmes from './pages/filmes';
+import Series from './pages/series';
+import Cinema from './pages/cinema';
 
 
 const AuthStack = createStackNavigator({
     Sign: {screen: SignInScreen},
+});
+
+const a = createStackNavigator({
+    Sign: {screen: Cadastro},
 });
 
 const NavegacaoDeCadastro = createStackNavigator({
@@ -21,6 +27,9 @@ const NavegacaoDeCadastro = createStackNavigator({
     Para: {
         screen: Cadastro,
     },
+    Login: {
+        screen: SignInScreen,
+    }
     
 })
 
@@ -30,6 +39,12 @@ const MainNavigator = createBottomTabNavigator({
     },
     Filmes: {
         screen: Filmes,
+    },
+    Series: {
+        screen: Series,
+    },
+    Cinema : {
+        screen: Cinema,
     }
 })
 
@@ -38,7 +53,8 @@ export default createAppContainer(
         {
             AuthStack,
             MainNavigator,
-            NavegacaoDeCadastro
+            NavegacaoDeCadastro,
+            a
             
         },
         {

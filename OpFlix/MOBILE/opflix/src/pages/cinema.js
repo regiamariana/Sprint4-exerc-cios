@@ -6,7 +6,7 @@ export default class Filmes extends Component {
     constructor() {
         super();
         this.state = {
-            filmes: []
+            cinema: []
         };
     }
 
@@ -19,9 +19,9 @@ export default class Filmes extends Component {
             .then(resposta => resposta.json())
             .then(data => {
                 let resultado = data.filter(element => {
-                    return element.idtipo == 1;
+                    return element.idplataforma == 3;
                 });
-                this.setState({ filmes: resultado })
+                this.setState({ cinema: resultado })
             })
             .catch(erro => console.warn(erro));
     };
@@ -31,7 +31,7 @@ export default class Filmes extends Component {
         return (
             <View>
                 <FlatList
-                    data={this.state.filmes}
+                    data={this.state.cinema}
                     keyExtractor={item => item.idlancamentos}
                     renderItem={({ item }) => (
                         <View style={{marginVertical: 60}}>

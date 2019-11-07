@@ -4,9 +4,15 @@ import {Text, FlatList, View, SafeAreaView, Image, StyleSheet, TouchableOpacity}
 export default class MainScreen extends Component{
     _irParaCadastro = () =>{
         
-            this.props.navigation.navigate('Cadastro');
+            this.props.navigation.navigate('Para');
         
     }
+
+    _irParaLogin = () =>{
+        
+        this.props.navigation.navigate('Login');
+    
+}
 
 
     
@@ -15,13 +21,18 @@ export default class MainScreen extends Component{
         return(
             <View>
                 <TouchableOpacity onPress={this._irParaCadastro}>
-            <Text>Cadastro</Text>
+            <Text>[Cadastro]</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={this._irParaLogin}>
+            <Text>[Login]</Text>
             </TouchableOpacity>
 
             
 
-
+            
             <Text>OPFLIX</Text>
+
+
             </View>
         )
     }
