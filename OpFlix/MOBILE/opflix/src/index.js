@@ -1,15 +1,20 @@
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { createAppContainer, createSwitchNavigator} from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+import { createDrawerNavigator } from 'react-navigation-drawer'
 
 
 import SignInScreen from "./pages/signin";
 import MainScreen from './pages/main';
 import Cadastro from './pages/cadastrar';
+import Adm from './pages/pgAdm'; 
+import LancamentoAdm from './pages/lancamentosAdm';
 
 import Filmes from './pages/filmes';
 import Series from './pages/series';
 import Cinema from './pages/cinema';
+import Netflix from './pages/netflix';
+
 
 
 const AuthStack = createStackNavigator({
@@ -34,7 +39,7 @@ const NavegacaoDeCadastro = createStackNavigator({
 })
 
 const MainNavigator = createBottomTabNavigator({
-    Main: {
+    Home: {
         screen: MainScreen,
     },
     Filmes: {
@@ -45,7 +50,21 @@ const MainNavigator = createBottomTabNavigator({
     },
     Cinema : {
         screen: Cinema,
+    },
+    Netflix: {
+        screen: Netflix,
     }
+
+})
+
+
+
+const AdmNavigator = createBottomTabNavigator({
+    Adm: {
+        screen: Adm,
+    },
+    
+
 })
 
 export default createAppContainer(
@@ -54,7 +73,9 @@ export default createAppContainer(
             AuthStack,
             MainNavigator,
             NavegacaoDeCadastro,
-            a
+            a,
+            AdmNavigator,
+            
             
         },
         {

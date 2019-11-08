@@ -26,9 +26,9 @@ export default class Cadastro extends Component{
     //     this.setState({telefone})
     // }
 
-    _efetuarCadastro = (event) =>{
-        event.preventDefault();
-        Axios.post("http://192.168.4.14:5000/api/usuario",{
+    _efetuarCadastro = async() =>{
+        // event.preventDefault();
+        await Axios.post("http://192.168.4.14:5000/api/usuario",{
             nome: this.state.nome,
             email: this.state.email,
             senha: this.state.senha,
@@ -42,9 +42,9 @@ export default class Cadastro extends Component{
 
     _irParaHome = () =>{
        
-            try {
+         try {
                 
-                this.props.navigation.navigate('Login');
+            this.props.navigation.navigate('Login');
             } catch (error) {
                 console.warn(error)
             }

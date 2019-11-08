@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import {ParseJwt} from "../services/auth";
+import jwt from 'jwt-decode';
 
 import {
     Text,
@@ -21,7 +22,7 @@ export default class SignIn extends Component {
     }
 
     _realizarLogin = async () => {
-        fetch('http://192.168.4.14:5000/api/Login', {
+        await fetch('http://192.168.4.14:5000/api/Login', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -39,9 +40,16 @@ export default class SignIn extends Component {
 
     _irParaHome = async (tokenAReceber) => {
         if (tokenAReceber != null) {
+
             try {
+                // console.warn()
                 await AsyncStorage.setItem('@opflix:token', tokenAReceber);
-                this.props.navigation.navigate('MainNavigator');
+                if (jwt(tokenAReceber).permissao === 'ADM') {
+                    this.props.navigation.navigate('AdmNavigator');
+                } else {
+                    this.props.navigation.navigate('MainNavigator');
+                }
+                
             } catch (error) {
                 console.warn(error)
             }
