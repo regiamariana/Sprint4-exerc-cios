@@ -15,7 +15,7 @@ export default class Filmes extends Component {
     }
 
     _carregarLancamentos = async () => {
-        await fetch('http://192.168.4.14:5000/api/lancamentos')
+        await fetch('http://192.168.5.123:5000/api/lancamentos')
             .then(resposta => resposta.json())
             .then(data => {
                 let resultado = data.filter(element => {

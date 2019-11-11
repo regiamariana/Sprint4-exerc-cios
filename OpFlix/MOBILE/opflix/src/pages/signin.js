@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import {ParseJwt} from "../services/auth";
 import jwt from 'jwt-decode';
 
+
 import {
     Text,
     View,
     TextInput,
     TouchableOpacity,
-    AsyncStorage
+    AsyncStorage,
+    Image,
 
+      
 } from 'react-native';
 //import console = require('console');
 
@@ -22,7 +25,7 @@ export default class SignIn extends Component {
     }
 
     _realizarLogin = async () => {
-        await fetch('http://192.168.4.14:5000/api/Login', {
+        await fetch('http://192.168.5.123:5000/api/Login', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -58,20 +61,71 @@ export default class SignIn extends Component {
 
 
     render() {
-        return (
-            <View>
-                <TextInput placeholder="email"
+        return ( 
+            
+                
+            <View style={{backgroundColor: "black", height: "100%"}}>
+
+                    {/* título */}
+                    <View style={{position: "relative"}}>
+                    <Image 
+                    style={{width: 300, height: 160, }}
+                    source={{uri: 'https://docs.substance3d.com/sddoc/files/159450981/159450980/1/1496152369146/stripes.png'}}
+                    />
+                        <View style={{backgroundColor: "white", width: 500, height: 100, position:"absolute", top: 30, left: 0}}>
+    
+                        </View>
+
+                        <View style={{top: -128, alignSelf: "center"}}>
+                        <Text  style={{ color: 'maroon',fontSize: 65, alignContent: "center"}}>[Fazer Login]</Text>
+                    </View>
+                    </View>
+
+                    
+
+                   
+
+
+                    {/* caixa de login */}
+                    <View>
+                    <Image 
+                    style={{width: 350, height: 260, position: "relative", alignSelf: "center"}}
+                    source={{uri: 'https://docs.substance3d.com/sddoc/files/159450981/159450980/1/1496152369146/stripes.png'}}
+                    />
+
+                    <View style={{backgroundColor: "white", width: 340, height: 250, position:"absolute", left: 30}}>  
+                    </View>
+                    
+                    <TextInput placeholder="email"
                     onChangeText={email => this.setState({ email })}
                     value={this.state.email}
-                />
+                    style={{position: "absolute",fontSize: 30, alignSelf: "center"}}
+                    />
+
+
                 <TextInput placeholder="senha"
                     onChangeText={senha => this.setState({ senha })}
                     value={this.state.senha}
-                />
-                <TouchableOpacity onPress={this._realizarLogin}>
-                    <Text>Login</Text>
+                    style={{position: "absolute", fontSize: 30, bottom: 120, alignSelf: "center", }}
+                    />
+
+
+                <TouchableOpacity onPress={this._realizarLogin}
+                style={{position: "absolute", bottom: 50, alignSelf: "center", borderColor: "black"}}>
+                    <Text style={{fontSize: 25, }}>Login</Text>
                 </TouchableOpacity>
-            </View>
+
+                    </View>
+
+
+
+                    
+
+
+                    </View>
+               
+            
+                 
         )
     }
 
