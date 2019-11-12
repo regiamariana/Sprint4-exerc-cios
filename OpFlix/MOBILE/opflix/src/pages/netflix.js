@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-import { Text, FlatList, View, SafeAreaView, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { TextInput ,Text, FlatList, View, SafeAreaView, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
 
 export default class Filmes extends Component {
     constructor() {
         super();
         this.state = {
-            netflix: []
+            filmes: [],
+            resposta: ""
         };
     }
 
@@ -19,19 +20,39 @@ export default class Filmes extends Component {
             .then(resposta => resposta.json())
             .then(data => {
                 let resultado = data.filter(element => {
-                    return element.idplataforma == 1;
+                    return element.idplataforma === 1;
                 });
-                this.setState({ netflix: resultado })
+                this.setState({ filmes: resultado })
             })
             .catch(erro => console.warn(erro));
     };
+
+  _carregarLancamentosResposta = async () =>{
+    await fetch('http://192.168.5.123:5000/api/lancamentos')
+    .then(a => a.json())
+    .then(data => {
+        let resultado = data.filter(element => {
+            return element.titulo == this.state.resposta;
+        });
+        this.setState({ filmes: resultado })
+    })
+    .catch(erro => console.warn(erro));
+  }
 
 
     render() {
         return (
             <View>
+
+                <TextInput
+                onChangeText={resposta => this.setState({ resposta })}
+                value={this.state.resposta}
+                />
+                <TouchableOpacity onPress={this._carregarLancamentosResposta}>
+                    <Text style={{fontSize: 25, }}>ir</Text>
+                </TouchableOpacity>
                 <FlatList
-                    data={this.state.netflix}
+                    data={this.state.filmes}
                     keyExtractor={item => item.idlancamentos}
                     renderItem={({ item }) => (
                         <View style={{marginVertical: 60}}>

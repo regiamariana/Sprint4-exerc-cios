@@ -52,7 +52,9 @@ export default class SignIn extends Component {
                 } else {
                     this.props.navigation.navigate('MainNavigator');
                 }
+               
                 
+
             } catch (error) {
                 console.warn(error)
             }

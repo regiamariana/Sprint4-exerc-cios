@@ -1,7 +1,14 @@
 import React,{ Component } from "react";
-import {Text, FlatList, View, SafeAreaView, Image, StyleSheet, TouchableOpacity} from 'react-native';
+import {ScrollView,Text, FlatList, View, SafeAreaView, Image, StyleSheet, TouchableOpacity} from 'react-native';
 
 export default class MainScreen extends Component{
+    constructor() {
+        super();
+        this.state = {
+            nomes: [],
+        };
+    }
+
     _irParaCadastro = () =>{
         
             this.props.navigation.navigate('Para');
@@ -19,7 +26,8 @@ export default class MainScreen extends Component{
 
     render(){
         return(
-            <View>
+            <View style={{height: '100%'}}>
+                <ScrollView>
                 <TouchableOpacity onPress={this._irParaCadastro}>
             <Text>[Cadastro]</Text>
             </TouchableOpacity>
@@ -28,10 +36,19 @@ export default class MainScreen extends Component{
             </TouchableOpacity>
 
             
+           <View style={{backgroundColor: 'maroon', height: 130}}>
+           <Text style={{alignSelf: "center", fontSize: 65, top: 21}}>OPFLIX</Text>
+           <Text style={{ fontSize: 65, top: 21, color: "white"}}>OPFLIX</Text>
+           </View>
+            
+            
 
             
-            <Text>OPFLIX</Text>
+            </ScrollView>
+            
+            
 
+            
 
             </View>
         )
