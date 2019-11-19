@@ -55,7 +55,25 @@ const MainNavigator = createBottomTabNavigator({
         screen: Netflix,
     }
 
-})
+},
+    {
+        initialRouteName: 'Home',
+        tabBarOptions: {
+            showLabel: true,
+            labelStyle: {fontSize: 20,
+                justifyContent: "center",
+                bottom: 10,
+            },
+        activeTintColor: "black",
+        inactiveTintColor: "white",
+        inactiveBackgroundColor: "maroon",
+        activeBackgroundColor: "#510005",
+        style:{
+        width: '100%',
+        height: 50,},
+        },
+    },
+);
 
 
 
@@ -67,6 +85,16 @@ const AdmNavigator = createBottomTabNavigator({
 
 })
 
+const AdmNavegacao = createStackNavigator({
+    de: {
+        screen: Adm,
+    },
+    para: {
+        screen: LancamentoAdm,
+    },
+
+})
+
 export default createAppContainer(
     createSwitchNavigator(
         {
@@ -75,6 +103,7 @@ export default createAppContainer(
             NavegacaoDeCadastro,
             a,
             AdmNavigator,
+            AdmNavegacao
             
             
         },

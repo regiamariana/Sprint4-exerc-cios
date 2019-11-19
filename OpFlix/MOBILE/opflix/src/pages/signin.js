@@ -101,18 +101,21 @@ export default class SignIn extends Component {
                     <TextInput placeholder="email"
                     onChangeText={email => this.setState({ email })}
                     value={this.state.email}
-                    style={{position: "absolute",fontSize: 30, alignSelf: "center"}}
+                    style={{position: "absolute",fontSize: 30, alignSelf: "center", width: 300}}
+                    underlineColorAndroid = "black"
                     />
 
 
                 <TextInput placeholder="senha"
                     onChangeText={senha => this.setState({ senha })}
                     value={this.state.senha}
-                    style={{position: "absolute", fontSize: 30, bottom: 120, alignSelf: "center", }}
+                    underlineColorAndroid = "black"
+                    style={{position: "absolute", fontSize: 30, bottom: 120, alignSelf: "center", width: 300}}
                     />
 
 
                 <TouchableOpacity onPress={this._realizarLogin}
+                underlineColorAndroid = "black"
                 style={{position: "absolute", bottom: 50, alignSelf: "center", borderColor: "black"}}>
                     <Text style={{fontSize: 25, }}>Login</Text>
                 </TouchableOpacity>

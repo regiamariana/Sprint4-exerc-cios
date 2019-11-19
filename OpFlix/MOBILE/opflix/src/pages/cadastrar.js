@@ -1,6 +1,7 @@
 import React,{ Component } from "react";
 import Axios from "axios";
-import {TextInput,Text, FlatList, View, SafeAreaView, Image, StyleSheet, TouchableOpacity} from 'react-native';
+import {ScrollView,TextInput,Text, FlatList, View, SafeAreaView, Image, StyleSheet, TouchableOpacity} from 'react-native';
+//import { ScrollView } from "react-native-gesture-handler";
 
 
 export default class Cadastro extends Component{
@@ -56,6 +57,7 @@ export default class Cadastro extends Component{
         return(
             
             <View style={{backgroundColor: "black", height: "100%"}}>
+                <ScrollView>
                 {/* título */}
                 <View style={{position: "relative"}}>
                     <Image 
@@ -83,33 +85,39 @@ export default class Cadastro extends Component{
                 <TextInput placeholder="Digite seu nome" 
                 onChangeText={nome => this.setState({nome})}
                 value={this.state.nome}
-                style={{position: "absolute",fontSize: 30, alignSelf: "center", color: "black"}}
+                style={{position: "absolute",fontSize: 30, alignSelf: "center", color: "black", width: 300}}
+                underlineColorAndroid = "black"
                 />
                 <TextInput placeholder="Email" 
                 onChangeText={email => this.setState({email})}
                 value={this.state.email}
-                style={{position: "absolute",fontSize: 30, alignSelf: "center", top: 70}}
+                style={{position: "absolute",fontSize: 30, alignSelf: "center", top: 70, width: 300}}
+                underlineColorAndroid = "black"
                 />
                 <TextInput placeholder="Senha" 
                 onChangeText={senha => this.setState({senha})}
                 value={this.state.senha}
-                style={{position: "absolute",fontSize: 30, alignSelf: "center", top: 130}}
+                style={{position: "absolute",fontSize: 30, alignSelf: "center", top: 130, width: 300}}
+                underlineColorAndroid = "black"
                 />
                 <TextInput placeholder="Telefone" 
                 onChangeText={telefone => this.setState({telefone})}
                 value={this.state.telefone}
-                style={{position: "absolute",fontSize: 30, bottom: 100, alignSelf: "center"}}
+                style={{position: "absolute",fontSize: 30, bottom: 100, alignSelf: "center", width: 300}}
+                underlineColorAndroid = "black"
                 />
                 <TouchableOpacity onPress={this._efetuarCadastro}
                 style={{position: "absolute", bottom: 50, alignSelf: "center", borderColor: "black"}}>
-                    <Text style={{fontSize: 25, }}>Cadastrar</Text>
+                    <Text 
+                    underlineColorAndroid = "black"
+                    style={{fontSize: 25, }}>Cadastrar</Text>
                 </TouchableOpacity>
                 </View>
                     
 
                     
 
-                
+                </ScrollView>
             </View>
             
         )
