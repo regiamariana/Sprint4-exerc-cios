@@ -19,8 +19,8 @@ export default class SignIn extends Component {
     constructor() {
         super();
         this.state = {
-            email: 'helena@email.com',
-            senha: '123456'
+            email: 'rob@email.com',
+            senha: '123458'
         };
     }
 
@@ -48,7 +48,7 @@ export default class SignIn extends Component {
                 // console.warn()
                 await AsyncStorage.setItem('@opflix:token', tokenAReceber);
                 if (jwt(tokenAReceber).permissao === 'ADM') {
-                    this.props.navigation.navigate('AdmNavigator');
+                    this.props.navigation.navigate('AdmNavegacao');
                 } else {
                     this.props.navigation.navigate('MainNavigator');
                 }

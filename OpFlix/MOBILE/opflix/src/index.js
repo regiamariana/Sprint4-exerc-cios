@@ -9,6 +9,8 @@ import MainScreen from './pages/main';
 import Cadastro from './pages/cadastrar';
 import Adm from './pages/pgAdm'; 
 import LancamentoAdm from './pages/lancamentosAdm';
+import CadastroAdm from './pages/cadastroLancamentos';
+import CategoriaAdm from './pages/categorias';
 
 import Filmes from './pages/filmes';
 import Series from './pages/series';
@@ -78,11 +80,42 @@ const MainNavigator = createBottomTabNavigator({
 
 
 const AdmNavigator = createBottomTabNavigator({
-    Adm: {
-        screen: Adm,
+    Lancamentos: {
+        screen: LancamentoAdm,
     },
+    Cadastro: {
+        screen: CadastroAdm,
+    }
+
     
 
+},{
+    initialRouteName: 'Lancamentos',
+    tabBarOptions: {
+        showLabel: true,
+        labelStyle: {fontSize: 20,
+            justifyContent: "center",
+            bottom: 10,
+        },
+    activeTintColor: "black",
+    inactiveTintColor: "white",
+    inactiveBackgroundColor: "maroon",
+    activeBackgroundColor: "#510005",
+    style:{
+    width: '100%',
+    height: 50,},
+    },
+}
+
+)
+
+const LancamentoNavegacao = createStackNavigator({
+    de: {
+        screen: CadastroAdm,
+    },
+    para: {
+        screen: LancamentoAdm,
+    }
 })
 
 const AdmNavegacao = createStackNavigator({
@@ -92,8 +125,11 @@ const AdmNavegacao = createStackNavigator({
     para: {
         screen: LancamentoAdm,
     },
-
+    parapara: {
+        screen: CategoriaAdm,
+    },
 })
+
 
 export default createAppContainer(
     createSwitchNavigator(
@@ -103,8 +139,8 @@ export default createAppContainer(
             NavegacaoDeCadastro,
             a,
             AdmNavigator,
-            AdmNavegacao
-            
+            AdmNavegacao,
+            LancamentoNavegacao
             
         },
         {
