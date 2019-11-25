@@ -19,8 +19,8 @@ export default class SignIn extends Component {
     constructor() {
         super();
         this.state = {
-            email: 'rob@email.com',
-            senha: '123458'
+            email: 'helena@email.com',
+            senha: '123456'
         };
     }
 

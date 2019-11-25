@@ -85,7 +85,7 @@ const AdmNavigator = createBottomTabNavigator({
     },
     Cadastro: {
         screen: CadastroAdm,
-    }
+    },
 
     
 
